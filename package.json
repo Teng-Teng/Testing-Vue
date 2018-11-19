@@ -1,0 +1,33 @@
+{
+  "name": "Testing-Vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teng-Teng/Testing-Vue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teng-Teng/Testing-Vue/issues"
+  },
+  "homepage": "https://github.com/Teng-Teng/Testing-Vue#readme",
+  "devDependencies": {
+    "expect": "^23.6.0",
+    "jsdom": "^13.0.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.2.0",
+    "mocha-webpack": "^2.0.0-beta.0",
+    "vue-template-compiler": "^2.5.17",
+    "vue-test-utils": "^1.0.0-beta.11",
+    "webpack": "^4.25.1"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
+}
