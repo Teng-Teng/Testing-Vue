@@ -16,10 +16,14 @@
             <button id="cancel" @click="cancel">Cancle</button>
             <button id="update" @click="update">Update</button>
         </div>
+
+        <div v-if="feedback">Your question has been updated.</div>
     </div>
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         name: "Question",
 
@@ -33,6 +37,7 @@
                     body: this.dataQuestion.body
                 },
                 editing: false,
+                feedback: false,
             };
         },
 
@@ -44,6 +49,12 @@
             update() {
                 this.question.title = this.form.title;
                 this.question.body = this.form.body;
+
+                axios.post('/questions/1', this.form)
+                    .then(({data}) => {
+                        this.feedback = true;
+                    });
+
                 this.editing = false;
             }
         }
